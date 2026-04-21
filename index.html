@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1> Fitness Tracker</h1>
+        <p>Track your workouts. Achieve your goals. Stay fit!</p>
+    </header>
+
+    <section class="overview">
+        <h2>Features</h2>
+        <ul>
+            <li>Log workouts easily</li>
+            <li>Automatic calorie calculation</li>
+            <li>Track progress visually</li>
+            <li>View workout history</li>
+        </ul>
+    </section>
+
+    <section class="form-section">
+        <h2>Log Workout</h2>
+        <form id="workoutForm">
+            <select id="exercise" required>
+                <option value="">Select Exercise</option>
+                <option value="Running">Running</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Pushups">Pushups</option>
+                <option value="Skipping">Skipping</option>
+                <option value="Swimming">Swimming</option>
+            </select>
+
+            <input type="number" id="duration" placeholder="Duration (minutes)" required>
+            <input type="text" id="calories" placeholder="Calories Burned" readonly>
+
+            <button type="submit">Add Workout</button>
+        </form>
+    </section>
+
+    <section class="log-section">
+        <h2>Workout History</h2>
+        <ul id="workoutList"></ul>
+        <button id="clearAllBtn" class="danger-btn">Remove All Records</button>
+    </section>
+
+    <section class="chart-section">
+        <h2>Progress Chart</h2>
+        <canvas id="progressChart"></canvas>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
